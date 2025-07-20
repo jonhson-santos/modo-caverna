@@ -6,9 +6,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
-    whatsapp: ''
   });
 
   const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);
@@ -114,11 +112,11 @@ function App() {
               <div className="flex items-center justify-center space-x-4 text-green-300 font-bold text-lg">
                 <div className="flex items-center animate-pulse">
                   <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
-                  E-mail
+                  Template enviado
                 </div>
                 <div className="flex items-center animate-pulse animation-delay-500">
                   <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
-                  WhatsApp
+                  Acesso liberado
                 </div>
               </div>
             </div>
@@ -324,7 +322,7 @@ function App() {
               <div className="text-center mb-8">
                 <div className="flex justify-center mb-4">
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-full animate-glow-blue">
-                    <Lock className="w-8 h-8 text-white" />
+                    <Brain className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 <h3 className="font-black text-2xl text-white mb-2">Acesso Exclusivo</h3>
@@ -336,36 +334,10 @@ function App() {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 blur"></div>
                   <input
-                    type="text"
-                    name="name"
-                    placeholder="Seu nome completo"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="relative w-full bg-gray-800/90 backdrop-blur-sm border-2 border-gray-600/50 focus:border-blue-500 rounded-xl px-6 py-5 text-white placeholder-gray-400 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 font-semibold text-lg group-hover:border-blue-400/70"
-                  />
-                </div>
-                
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 blur"></div>
-                  <input
                     type="email"
                     name="email"
-                    placeholder="Seu melhor e-mail"
+                    placeholder="Digite seu melhor e-mail"
                     value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="relative w-full bg-gray-800/90 backdrop-blur-sm border-2 border-gray-600/50 focus:border-blue-500 rounded-xl px-6 py-5 text-white placeholder-gray-400 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 font-semibold text-lg group-hover:border-blue-400/70"
-                  />
-                </div>
-                
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 blur"></div>
-                  <input
-                    type="tel"
-                    name="whatsapp"
-                    placeholder="WhatsApp (com DDD)"
-                    value={formData.whatsapp}
                     onChange={handleInputChange}
                     required
                     className="relative w-full bg-gray-800/90 backdrop-blur-sm border-2 border-gray-600/50 focus:border-blue-500 rounded-xl px-6 py-5 text-white placeholder-gray-400 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 font-semibold text-lg group-hover:border-blue-400/70"
@@ -403,7 +375,7 @@ function App() {
                   
                   <span className="relative flex items-center justify-center">
                     🔓 Destravar o Template AGORA
-                    <Lock className="w-7 h-7 ml-3 group-hover:animate-bounce" />
+                    <Brain className="w-7 h-7 ml-3 group-hover:animate-bounce" />
                   </span>
                 </button>
                 
@@ -414,7 +386,7 @@ function App() {
           {/* Trust Indicators */}
           <div className="flex justify-center space-x-6 animate-fade-in animation-delay-2000">
             <div className="flex items-center text-green-400 font-bold text-sm animate-pulse">
-              <Shield className="w-5 h-5 mr-2" />
+              <CheckCircle className="w-5 h-5 mr-2" />
               <span>100% Seguro</span>
             </div>
             <div className="flex items-center text-blue-400 font-bold text-sm animate-pulse animation-delay-300">
@@ -426,7 +398,7 @@ function App() {
           {/* Footer */}
           <div className="text-center animate-fade-in animation-delay-2200">
             <p className="text-gray-500 text-sm flex items-center justify-center">
-              🔒 Seus dados estão seguros e não serão compartilhados
+              🔒 Seu e-mail está seguro e não será compartilhado
               <Eye className="w-4 h-4 ml-2 animate-blink" />
             </p>
           </div>
