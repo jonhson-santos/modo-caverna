@@ -43,11 +43,7 @@ function App() {
   };
 
   const handleMainFunnelRedirect = () => {
-    setShowVideo(true);
-    setTimeout(() => {
-      console.log('Redirecionando para página principal do funil');
-      alert('Redirecionamento para página principal do funil');
-    }, 1000);
+    window.open('https://page-renda-extra-front-and.vercel.app/', '_blank');
   };
 
   if (isSubmitted) {
